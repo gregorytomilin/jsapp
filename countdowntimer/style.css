@@ -1,0 +1,214 @@
+*{
+    /* Для эксплорера*/
+    -ms-user-select: none;
+    /** * Для мозилы */
+    -moz-user-select: none;
+
+    /*** Для конкверора */
+    -khtml-user-select: none;
+
+    /**
+     * Для Сафари и Хрома
+     */
+    -webkit-user-select: none;
+}
+
+html {
+    height: 100%;
+}
+body {
+
+    font-family: sans-serif;
+    background: linear-gradient(45deg, rgba(2,0,36,1) 11%, rgba(118,9,121,0.8323704481792717) 58%, rgba(0,212,255,1) 100%) no-repeat;
+    background-attachment: fixed;
+}
+
+
+.stopwatch_block{
+    position: relative;
+    z-index: 5;
+    background-color: #3E4156;
+    box-sizing: border-box;
+    max-width: 400px;
+    padding: 15px 10px;
+    margin: 10px auto;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.stopwatch_header {
+    display: flex;
+    padding: 0 10px;
+    color: white;
+    margin: 0 auto;
+justify-content: center;
+    align-items: center;
+}
+
+.stopwatch_header h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.stopwatch_header img{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.stopwatch {
+    background-color: #e3e3e3;
+    max-width: 200px;
+    padding: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px auto 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.stopwatch_control {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.sw_control {
+    margin: 10px;
+    padding: 5px 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f7fcff;
+    color: #494949;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease .5s;
+}
+
+.sw_control:hover {
+    box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    background-color: #ffeaea;
+}
+
+
+
+.recordField {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #ffe385;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+}
+.stopwatch_record {
+    display: none;
+}
+
+.stopwatch_recordClear{
+    padding: 10px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+}
+
+.countdownRange {
+    width: 100%;
+}
+
+
+.countdowntimer_setup_block {
+    margin-top: -190px;
+    transition: margin ease-in .5s;
+}
+.countdowntimer_setup{
+    background-color: #3b3b3e;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    max-width: 350px;
+    padding: 15px;
+    margin: -10px auto 10px;
+    width: 100%;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+.countdowntimer_setup p{
+    margin: 5px 0;
+    color: #f8f8f8;
+}
+
+.countdowntimer_setup_show {
+    background-color: #bdbe2f;
+    width: 50px;
+    margin: -10px auto;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease .2s;
+
+}
+
+.countdowntimer_setup_show:hover {
+    background-color: #dadb34;
+}
+.countdowntimer_setup_show img{
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+}
+
+.countdowntimerAlertBlock{
+
+    background: rgba(0,0,0,0.8);
+
+
+    display: none;
+    filter: alpha(opacity=80);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.countdowntimerAlertBlock img{
+    display: block;
+    margin: 40px auto;
+}
+
+
+@media (max-width: 450px) {
+    .sw_control a{
+        font-size: 25px;
+    }
+    .stopwatch_control a{
+        font-size: 25px;
+        margin: 10px 0;
+    }
+    .recordField {
+        margin: 10px 0;
+    }
+    .countdowntimer_setup{
+        width: 290px;
+    }
+}

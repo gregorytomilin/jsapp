@@ -1,0 +1,133 @@
+*{
+    /* Для эксплорера*/
+    -ms-user-select: none;
+    /** * Для мозилы */
+    -moz-user-select: none;
+
+    /*** Для конкверора */
+    -khtml-user-select: none;
+
+    /**
+     * Для Сафари и Хрома
+     */
+    -webkit-user-select: none;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    font-family: sans-serif;
+    background: linear-gradient(45deg, rgba(2,0,36,1) 11%, rgba(118,9,121,0.8323704481792717) 58%, rgba(0,212,255,1) 100%) no-repeat;
+    background-attachment: fixed;
+}
+
+
+.stopwatch_block{
+    background-color: #3E4156;
+    box-sizing: border-box;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.stopwatch_header {
+    display: flex;
+    padding: 0 10px;
+    color: white;
+    margin: 0 auto;
+justify-content: center;
+    align-items: center;
+}
+
+.stopwatch_header h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.stopwatch_header img{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.stopwatch {
+    background-color: #e3e3e3;
+    max-width: 200px;
+    padding: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px auto 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.stopwatch_control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.sw_control {
+    margin: 10px;
+    padding: 5px 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f7fcff;
+    color: #494949;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease .5s;
+}
+
+.sw_control:hover {
+    box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    background-color: #ffeaea;
+}
+
+
+
+.recordField {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #ffe385;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+}
+.stopwatch_record {
+    display: none;
+}
+
+.stopwatch_recordClear{
+    padding: 10px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow:1px 1px 7px rgba(0, 0, 0, 0.44);
+}
+@media (max-width: 400px) {
+    .stopwatch_control a{
+        font-size: 13px;
+        margin: 10px 0;
+    }
+    .recordField {
+        margin: 10px 0;
+    }
+}
